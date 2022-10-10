@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+}   
+
+.tbl{
+    background: linear-gradient(90deg, rgba(0, 28, 128, 0.74), rgba(128, 208, 253, 0.74));  
+    height: 45px;
+}
+.re-appBar{
+    max-width: 100%;
+    height:47px;
+}
+
+.e_image>img{
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 15px;
+    position: relative;
+}
+.loginpage>img{
+   
+    flex: display;
+    padding-top:0px;    
+}
+@media (min-width:480px) {
+    .re-appBar{
+        max-width: 100%;
+        min-width: 1000px;
+    }
+ }
+.fullBox{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+}
+@media (min-width:0px) {
+    .fullBox{
+        
+        max-width: 100%;
+        min-width: 1000px;
+    }
+ }
+
+
+
+ .refullLeft{
+   padding-top: 100px;
+    width: 50%;
+    background-color: white;
+    
+ }
+ .fullRight{
+    width: 50%;
+    background-color:#f3fbff;
+    
+ }
+ 
+ .fullRight>img{
+    padding-top: 5%;
+    padding-left: 25%;
+ }
+.fullRight>p{
+    display: flex;
+    justify-content: center;
+    font-weight:500;
+}
+
+.refullLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.refullLeft>img{
+    padding-top: 50px;
+    height: auto;
+    width: 50%;
+}
+.linkStyle>a{
+  padding-left: 300px;
+  padding-top: 20px;
+  float: right;
+  color: red;
+  text-decoration: none;  
+
+}
+
+.textfiled>h2{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-bottom:0;
+   
+    font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+}
