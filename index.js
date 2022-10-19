@@ -15,11 +15,7 @@ const connect =()=>{
         throw err;
     })
 }
-app.use(cors({
-    origin: ["http://localhost:3000/"],
-    methods:["POST"],
-    credentials: true,
-}))
+app.use(cors())
 app.use(cookieParser());
 app.use("/api/user",authRoutes)
 app.listen(8000,()=>{
