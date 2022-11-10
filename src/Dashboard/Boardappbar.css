@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+ 
+}
+.board{
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.board-appbar{
+    display: flex;
+    background: linear-gradient(90deg, rgba(75, 109, 235, 0.74) 19.72%, rgba(4, 158, 247, 0.74) 103.61%);
+    height: 50px;
+}
+
+.e-board>img{
+    padding-bottom: 20px;
+   display: flex;
+   flex-direction: column;
+   height: 30px;
+   justify-content: center;
+   align-items: center;
+   font-weight: 400;
+}
+
+.left-content{
+    font-family: 'Montserrat';
+    width: 50%;
+    color: white;
+   padding-top: 30px;
+    padding-bottom: 40px;
+    margin-left: 15px;
+    display: flex;   
+}
+#sd{
+    padding-left: 5px;
+}
+
+.right-content{
+    font-family: 'Montserrat';
+    align-items: center;
+    width: 50%;
+    height: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 250px;
+    display: flex;      
+}
+#leader-icon{
+   width: 20px;
+   height: 19px;
+   margin-bottom: 5px;
+}
+.leader-board{
+    display: flex;
+    margin-top: 10px;
+    width: 60px;
+}
+
+.badge{
+    display: flex;
+    padding-left: 10px;
+    width: 15px;
+    transform: rotate(-10deg);
+}
+
+.hello{
+    font-size: 15px;
+     width: 20px;
+    display: flex;
+    padding-left: 40px;
+}
+
+
+.avatar-icon{
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color:blue;
+}
+.avatar{
+    display: flex;
+    margin-left: 70px;
+}
+
+.input{
+   width: 179px;
+   margin-left: 80px;
+}
+
+
+  .sicon{
+    background-color: blue;
+    width: 10px;
+  }
+
+  .searchIcon{
+    display: flex;
+    margin-left: 50px;
+  }

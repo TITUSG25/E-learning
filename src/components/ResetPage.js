@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField, Link, Button } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import AppBar from "@mui/material/AppBar";
@@ -14,6 +14,7 @@ import IconButton from "@mui/material/IconButton";
 import person from "../images/person1.png";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const textfield = {
   width: "466px",
@@ -25,7 +26,7 @@ const textfield = {
 const button = {
   width: "466px",
   borderRadius: "10px",
-  marginTop: "30px",
+  marginTop: "40px",
 };
 
 const cancelbutton = {
@@ -59,15 +60,29 @@ export default function ResetPage() {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+
+  const[reseterr,setReseterr]=useState(null);
+  const[resetsuccess,setResetsuccess]=useState(null);
+  const navigate=useNavigate();
+
   const { currentUser } = useSelector((state) => state.user);
   const onSubmit = async (values) => {
     const { PasswordConfirm, ...data } = values;
-    await axios
-      .put(`http://localhost:8000/api/user/reset/${currentUser._id}`, data)
+  const response=  await axios
+      .put(`http://localhost:8080/api/user/reset/${currentUser._id}`, data)
       .catch((err) => {
-        if (err) console.log(err.response.data.message);
+        if (err){
+          setReseterr(err.response.data.message)
+          setResetsuccess(null);
+        }
       });
-    alert("password reset is done");
+       if(response){
+        setResetsuccess("Password Update Sucessfully")
+        setReseterr(null);
+        setTimeout(()=>{
+          navigate("/")
+        },2000)
+       }
   };
 
   const lcase = /(?=.*[a-z])/;
@@ -124,11 +139,11 @@ export default function ResetPage() {
               onBlur={formik.handleBlur}
               placeholder="  Enter your New Password"
             />
-            <h3 style={{ color: "red" }}>
+            <h4 className="reset-valid">
               {formik.errors.password && formik.touched.password
                 ? formik.errors.password
                 : ""}
-            </h3>
+            </h4>
 
             <TextField
               placeholder=" Confirm your New Password"
@@ -154,11 +169,11 @@ export default function ResetPage() {
                 ),
               }}
             />
-            <h3 style={{ color: "red" }}>
+            <h4 className="reset-valid">
               {formik.errors.PasswordConfirm && formik.touched.PasswordConfirm
                 ? formik.errors.PasswordConfirm
                 : ""}
-            </h3>
+            </h4>
           </div>
 
           <Button
@@ -172,6 +187,9 @@ export default function ResetPage() {
           <Button style={cancelbutton} variant="contained">
             Cancel
           </Button>
+
+          <span className="re-success">{!reseterr && resetsuccess?resetsuccess:""}</span>
+          <span className="re-err">{!resetsuccess && reseterr?reseterr:""}</span>
 
           <div className="linkStyle">
             <Link href="/">Back to Login</Link>

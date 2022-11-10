@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField, Link, Button } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import AppBar from "@mui/material/AppBar";
@@ -16,8 +16,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import IconButton from "@mui/material/IconButton";
 import axios from "axios";
-import { ToastContainer, toast, Flip } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 
 const images = [
   require("../images/slide1.png"),
@@ -33,7 +32,7 @@ const slideshowStyle = {
 const textfield = {
   width: "466px",
   height: "46px",
-  paddingTop: "35px",
+  paddingTop: "40px",
   display: "flex",
 };
 
@@ -61,14 +60,26 @@ export default function ButtonAppBar() {
     event.preventDefault();
   };
 
+  const[errmessage,setErrmessage]=useState(null);
+  const[success,setSuccess]=useState(null);
+  const navigate=useNavigate();
+
   const onSubmit = async (values) => {
     const { ...data } = values;
-    const response = await axios
-      .post("http://localhost:8000/api/user/signin", data)
+    const response = await axios  
+      .post("http://localhost:8080/api/user/signin", data)
       .catch((err) => {
-        if (err) toast.error(err.response.data.message);
+        if(err)
+        setErrmessage(err.response.data.message);
+        setSuccess(null)
       });
-    if (response) toast.success(`${data.userId} ${response.data}`);
+      if(response){
+      setErrmessage(null)
+        setSuccess(`${data.userId} ${response.data}`);
+        setTimeout(()=>{
+          navigate('/Dashboard')
+        },2000)
+      }
   };
 
   const validate = yup.object().shape({
@@ -89,11 +100,12 @@ export default function ButtonAppBar() {
     onSubmit,
   });
 
+  
   return (
     <>
       <div className="appBar">
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar position="static" className="appColor">
+          <AppBar position="static" className="appcolor">
             <div className="e_image">
               <img src={eLearning} alt="eLearning logo" />
             </div>
@@ -124,11 +136,11 @@ export default function ButtonAppBar() {
                 ),
               }}
             />
-            <h3 style={{ color: "red" }}>
+            <h4>
               {formik.errors.userId && formik.touched.userId
                 ? formik.errors.userId
                 : ""}
-            </h3>
+            </h4>
             <TextField
               placeholder="  Enter your Password"
               value={formik.values.password}
@@ -162,28 +174,24 @@ export default function ButtonAppBar() {
                 ),
               }}
             />
-            <h3 style={{ color: "red" }}>
+            <h4>
               {formik.errors.password && formik.touched.password
                 ? formik.errors.password
                 : ""}
-            </h3>
+            </h4>
             <div className="linkStyle">
               <Link href="/User">Forgot Your Password?</Link>
             </div>
           </div>
-          <Button
-            style={button}
-            variant="contained"
-            onClick={formik.handleSubmit}
-          >
-            Login
+          <Button style={button} variant="contained" onClick={formik.handleSubmit} >
+           Login
           </Button>
-          <ToastContainer
-            position="bottom-center"
-            autoClose={3000}
-            transition={Flip}
-          />
+
+          <span className="success">{!errmessage && success?success:""}</span>
+          <span className="error">{!success && errmessage?errmessage:""}</span>
         </div>
+
+        
 
         <div className="fullRight">
           <img src={sight} alt="sightspectrum" />

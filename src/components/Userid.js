@@ -1,5 +1,5 @@
-import React from "react";
-import { TextField, Button } from "@mui/material";
+import React, { useState } from "react";
+import { TextField, Button,Link } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -14,6 +14,8 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginFailure, loginStart, loginSuccess } from "../redux/userSlice";
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+
 
 export default function Userid() {
   const textfield = {
@@ -28,18 +30,32 @@ export default function Userid() {
     borderRadius: "10px",
     marginTop: "50px",
   };
+
+  const[usererr,setUsererr]=useState(null)
+  const[usersuccess,setUsersuccess]=useState(null);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+
   const onSubmit = async (values) => {
     dispatch(loginStart());
     const { ...data } = values;
-    const resp = await axios
-      .post("http://localhost:8000/api/user/userId", data)
-      .catch((err) => {
+    const response = await axios
+      .post("http://localhost:8080/api/user/userId", data)
+      .catch((err) => { 
+        if(err){ 
         dispatch(loginFailure(err.response.data.message));
-      });
-    dispatch(loginSuccess(resp.data));
-    navigate("/Reset");
+          setUsererr(err.response.data.message)
+          setUsersuccess(null)
+   }});  
+        if(response){
+        dispatch(loginSuccess(response.data));
+        setUsersuccess(`Verify Successfully ${data.userId}`)
+        setUsererr(null)
+        setTimeout(()=>{
+          navigate("/Reset")
+        },2000)
+        }
   };
 
   const validate = yup.object().shape({
@@ -67,10 +83,12 @@ export default function Userid() {
       </div>
       <div className="fullBox">
         <div className="userfullLeft">
+        <Link href="/">  <Button title="Back" id="back-btn"> <KeyboardBackspaceIcon  className="circle"/></Button></Link>
+
           <h1>Reset Your Password</h1>
 
           <div className="textfield" onSubmit={formik.handleSubmit}>
-            <TextField
+            <TextField  
               style={textfield}
               name="userId"
               placeholder="  Enter your User ID"
@@ -89,20 +107,27 @@ export default function Userid() {
                 ),
               }}
             />
-            <h3 style={{ color: "red" }}>
+            <h4 className="user-valid">
               {formik.errors.userId && formik.touched.userId
                 ? formik.errors.userId
                 : ""}
-            </h3>
+            </h4>
           </div>
 
-          <Button
+          
+          <div id="user-left-btn">
+          <Button  
             style={button}
             variant="contained"
             onClick={formik.handleSubmit}
           >
             click to Reset
           </Button>
+          </div>
+
+          <span className="id-err">{!usersuccess && usererr?usererr:""}</span>
+          <span className="id-success">{!usererr && usersuccess?usersuccess:""}</span>
+
         </div>
 
         <div className="fullRight">

@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  button {
+    background: #003acf;
+    border-radius: 4px;
+  }
+  
+  .Overal-perform {
+    width: 490px;
+    height: 265px;
+    background-color: #FFFFFF;
+   
+    display: flex;
+    padding-left: 10px;
+    padding-top: 20px;
+    position: absolute;
+    left: 815px;
+    top: 530px;
+  }
+  
+  
+  
+  .list {
+    width: 100%;
+    display: flex;
+  }
+  
+  .left-list {
+    width: 73%;
+    display: flex;
+  }
+  
+  .right-list {
+    margin-top: 8px;
+  
+    width: 11%;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    padding-top: 8px;
+    height: 25px;
+    width: 25px;
+  }
+  
+  #text1 {
+    width: 100px;
+    height: 11px;
+  
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 550;
+    font-size: 11px;
+    line-height: 11px;
+  
+    display: flex;
+  
+    color: #000000;
+  
+    padding-left: 8px;
+    padding-top: 6px;
+  }
+  
+  #text2 {
+    position: absolute;
+    width: 150px;
+    height: 5px;
+  
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7px;
+    line-height: 4px;
+  
+    display: flex;
+  
+    color: #0E49B8;
+    padding-left: 40px;
+    padding-top: 28px;
+  }
+  
+  #btn-text {
+    color: #ffffff;
+    width: 40px;
+    background-color: #003acf;
+    height: 15px;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 0px;
+    display: flex;
+    font-size: 7px;
+    border: none;
+    text-align: center;
+  }
+  
+  .inner-left {
+    display: flex;
+    width: 300px;
+  }
+  
+  .inner-ryt {
+    display: flex;
+    gap: 3px;
+  
+    padding-left: 12px;
+    padding-top: 0px;
+    padding-right: 20px;
+    flex-direction: column;
+  }
+  
+  .chart-design {
+    display: flex;
+    padding-top: 0px;
+  }
+  
+  #head {
+    height: 11px;
+  
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11px;
+    position: relative;
+    display: flex;
+  
+    padding-left: 0px;
+    padding-bottom: 2px;
+    padding-top: 6px;
+  
+    color: #003acf;
+  }
+  
+  .Gridleft {
+    width: 1000px;
+    height: 20px;
+  }
+  
+  .start-date {
+    display: flex;
+  }
+  
+  .start-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+  }
+  .date {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+  }
+  .startDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  
+    font-size: 13px;
+    width: 100%;
+  margin-right: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .endDate {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 13px;
+    margin-right: 10px;
+    width: 100%;
+  
+    font-family: "Segoe UI";
+    font-style: normal;
+  }
+  .leaderboard {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    justify-content: flex-end;
+    margin-top: 15px;
+  
+    padding-right: 6px;
+  }
+  
+  a {
+    color: #003acf;
+    text-decoration: none;
+    padding-right: 10px;
+  }
+  
+  label {
+    font-family: "Segoe UI";
+    font-style: normal;
+    color: #5b5f62;
+  }
+
+ #headchart{
+
+   
+      
+    /* display: flex; */
+    padding-left: 10px;
+    padding-top: 20px;
+    position: absolute;
+    left: 810px;
+    top: 455px;
+
+ 
+font-size: 20px;
+line-height: 24px;
+color: #367CFF;
+width: 200px;
+height: 24px;
+  
+  }

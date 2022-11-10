@@ -4,7 +4,7 @@ body{
 }   
 
 .tbl{
-    background: linear-gradient(90deg, rgba(0, 28, 128, 0.74), rgba(128, 208, 253, 0.74));  
+    background: linear-gradient(90deg, rgba(32, 0, 128, 0.74), rgba(128, 208, 253, 0.74));  
     height: 45px;
 }
 .re-appBar{
@@ -96,4 +96,19 @@ body{
     font-weight: 400;
 font-size: 20px;
 line-height: 24px;
+}
+
+.reset-valid{
+    position: absolute;
+    display: flex;
+    color: red;
+    margin-top: 12px;
+}
+
+.re-success{
+    color: green;
+}
+
+.re-err{
+    color: red;
 }

@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #F3F5F9;
+}
+
+
+.right-dashboard{
+    width: 80%;
+    /* float: right; */
+   display: flex;
+}
+.left-dashboard{
+    width: 20%;
+   float: left;
+   display: flex;
+}

@@ -1,0 +1,220 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+   display: flex;
+   margin-top: 40px;
+    width: 100px;
+    height: 947px;
+}
+.menu-firsthead{
+    position: absolute;
+    display: flex;
+    margin-left: 20px;
+    font-family: Lato;
+    color:#367CFF;
+    align-items: center;
+    width: 42px;
+    height: 19px;
+    
+}
+
+.menu-list{
+    margin-top: 40px;
+}
+.menu-icon{
+    width: 67px;
+   height: 17px;
+   left: 50px;
+   top: 146px;
+   color: black;
+}
+.perform{
+    color: black;
+    width: 30px;
+    height: 30px;
+}
+
+.achieve{
+    color: black;
+
+    width: 30px;
+    height: 30px;
+    
+}
+
+.menu-text{
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    color: black;
+}
+
+.divider{
+    position: absolute;
+width: 150px;
+height: 0px;
+left: 10px;
+top: 280px;
+}
+
+
+.menu-secondhead{
+    color: #367CFF;
+    position: absolute;
+    display: flex;
+    margin-left: 10px;
+   margin-top: 50px;
+   font-family: 'Lato';
+}
+.recent-upload{
+   
+    margin-top: 70px;
+    font-size: 16px;
+    position: absolute;
+    width: 150px;
+    left: 10px;
+    color: black;
+}
+.ux{
+    position: absolute;
+    display: flex;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.view{
+   margin-left: 90px;
+   width: 50px;
+   margin-top: 9px;
+   color: #0CBC8B;
+   display: flex;
+    position: absolute;
+    font-size: 7px;
+}
+.ux-star{
+    color:  #F4B400;
+    display: flex;
+    margin-left: 40px;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+}
+.number{
+    position: absolute;
+    display: flex;
+    margin-left: 150px;
+    margin-top: 8px;
+    font-size: 8px;
+}
+
+.recent-upload2{
+   
+    margin-top: 100px;
+    font-size: 16px;
+    position: absolute;
+    left: 10px;
+    color: black;
+}
+.ux2{
+    font-size: 16px;
+    font-weight: 600;
+}
+.view2{
+   margin-left: 5px;
+   color: #0CBC8B;
+    position: relative;
+    font-size: 8px;
+}
+.ux-icon{
+    position: relative;
+    height: 10px;
+}
+.number2{
+    position: relative;
+    font-size: 8px;
+}
+
+.divider-2{
+    position: relative;
+    top: 300px;
+}
+
+.menu-suggest{
+    margin-left: 10px;
+}
+
+.menu-thirdhead{
+    color: #367CFF;
+    display: flex;
+    margin-left: 10px;
+   margin-top: 320px;
+   font-family: 'Lato';
+}
+
+#menu-suggest-btn{
+    display: flex;
+    padding-left: 5px;
+}
+
+.btn-ud{
+    display: flex;
+    top: 600px;
+    left: 10px;
+    font-size: 11px;
+    height: 18px;
+    width: 65px;
+    border-radius: 5px;
+    border: none;
+    background-color: #CCE0FF;
+}
+.btn-android{
+    display: flex;
+    margin-top: 8px;
+    left: 10px;
+    font-size: 11px;
+    height: 18px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #004183;
+}
+
+
+.btn-ios{
+    top: 650px;
+    left: 10px;
+    font-size: 11px;
+    height: 18px;
+    width: 38px;
+    border-radius: 5px;
+    border: none;
+    background-color: #CCE0FF;
+}
+.btn-java{
+   margin-left: 10px;
+    font-size: 11px;
+    height: 18px;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #004183;
+}
+.btn-web{
+    display: flex;
+     margin-top: 8px;
+    left: 10px;
+    font-size: 11px;
+    height: 18px;
+    width: 122px;
+    border-radius: 5px;
+    border: none;
+    background-color: #CCE0FF;
+}
+
+

@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* .mid-design{
+  display: flex;
+  margin-top: 40px;
+}
+
+.mid-appbar{
+  display: flex;
+  width: 950px;
+}
+.welcome{
+  height: 150px;
+} */
+
+.Download-course {
+  position: absolute;
+  display: flex;
+  margin-left: 10px;
+  width: 600px;
+  color: #367cff;
+  font-size: 13px;
+  margin-top: 380px;
+  top: 450px;
+}
+.Down-head {
+  position: absolute;
+  display: flex;
+}
+#Down-select {
+  position: absolute;
+  display: flex;
+  margin-left: 380px;
+  width: 130px;
+  margin-top: 25px;
+}
+
+.Down-paper {
+  position: absolute;
+  width: 100%;
+}
+.Down-paperleft {
+  position: absolute;
+  width: 20%;
+}
+.Down-paperright {
+  width: 80%;
+  margin-left: 80px;
+  margin-top: 10px;
+  position: absolute;
+}
+#pdf-text {
+  color: #969bc5;
+  position: absolute;
+  font-size: 10px;
+}
+#pdf-text1 {
+  color: #271993;
+  margin-top: 12px;
+  position: absolute;
+  font-size: 13px;
+}
+#Down-avatar {
+  position: absolute;
+  display: flex;
+  width: 25px;
+  height: 25px;
+  margin-top: 28px;
+}
+#Down-avatar-text {
+  color: #271993;
+  font-family: "monserrat";
+  position: absolute;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 35px;
+  font-size: 11px;
+  font-weight: 300px;
+}
+#Down-publish {
+  position: absolute;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #c987fc;
+  font-size: 10px;
+  background-color: #faf3ff;
+  border-radius: 5px;
+  margin-top: 32px;
+  margin-left: 120px;
+}
+#Down-star {
+  position: relative;
+  display: flex;
+  height: 15px;
+  margin-top: -1px;
+  /* margin-left: 310px; */
+  color: #f4b400;
+}
+#Down-num {
+  position: absolute;
+  display: flex;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-left: 330px;
+}
+#Down-rate {
+  position: absolute;
+  display: flex;
+  font-size: 10px;
+  margin-top: 35px;
+  margin-left: 258px;
+}
+
+.p1-img {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+.trending-course {
+  position: absolute;
+  display: flex;
+  margin-top: 240px;
+  margin-left: 10px;
+  color: #367cff;
+}
+#trend-head {
+  position: absolute;
+  color: #367cff;
+  font-size: 20px;
+  display: flex;
+}
+.trend-typo {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  font-size: 15px;
+  margin-top: 180px;
+  margin-left: 10px;
+}
+
+#trend-box {
+  position: absolute;
+  display: flex;
+}
+
+.trend-program {
+  position: absolute;
+  width: 250px;
+  height: 24px;
+  background-color: #ffc6af;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.avatar-java-circle {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  margin-top: 40px;
+}
+.fun {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.trending {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.float-right {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-left: 60px;
+  position: absolute;
+  width: 80%;
+  float: right;
+}
+.float-left {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  float: left;
+  padding-left: 10px;
+
+  /* background-color:yellow; */
+}
+
+#email {
+  position: absolute;
+  padding-top: 38px;
+  font-size: 10px;
+  color: #ababab;
+}
+#re-view {
+  padding-top: 52px;
+  font-size: 8px;
+  position: absolute;
+  color: #0cbc8b;
+}
+#java-star {
+  position: absolute;
+  width: 15px;
+  height: 10px;
+  color: #f4b400;
+}
+#java-num {
+  position: absolute;
+  padding-left: 15px;
+}
+#java-btn {
+  width: 55px;
+  height: 20px;
+  margin-top: 45px;
+  padding-top: 5px;
+  padding-left: 8px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #003acf;
+  margin-left: 128px;
+  font-size: 8px;
+  display: flex;
+  position: absolute;
+}
+
+.tit {
+  position: relative;
+  display: flex;
+  /* margin-top: 30px; */
+  height: 175px;
+  background: linear-gradient(90.07deg, #426bf6 1.03%, #01a4ff 99.11%);
+  /* border: 1px solid #E8F7FF; */
+  border-radius: 20px;
+}
+
+.title-design {
+  position: relative;
+  width: 1010px;
+  height: 175px;
+  margin-top: 10px;
+}
+
+#good-mrng {
+  position: absolute;
+  font-family: "monserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  top: 10px;
+  color: #ffffff;
+  padding-left: 60px;
+}
+
+.title-content {
+  width: 100%;
+  position: absolute;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  padding-left: 60px;
+  padding-top: 50px;
+}
+
+#btn {
+  position: absolute;
+  font-size: 16px;
+  width: 137px;
+  height: 32px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 4px;
+}
+
+#title-button {
+  position: absolute;
+  display: flex;
+  padding-left: 60px;
+
+  padding-top: 100px;
+}
+.imgWelcome {
+  height: 50px;
+  position: absolute;
+  float: right;
+  display: flex;
+  flex-direction: row;
+}
+
+#e-icon {
+  height: 180px;
+  width: 200px;
+  margin-left: 80px;
+}
+
+.content {
+  display: block;
+  padding-top: 18px;
+}
+
+#ratings {
+  display: block;
+}
+
+.pdf-button {
+  width: 59px;
+  height: 10px;
+  margin-top: 2px;
+
+  display: flex;
+  flex-direction: column;
+
+  float: right;
+}
+
+#pdf-button {
+  display: flex;
+  font-size: 8px;
+  float: right;
+
+  color: #faf3ff;
+
+  width: 65px;
+  height: 15px;
+
+  background: #003acf;
+  border-radius: 4px;
+  padding-top: 3px;
+  padding-left: 2px;
+  border: none;
+}
+
+.pdf-icon {
+  width: 10px;
+  height: 6px;
+  font-weight: 100;
+
+  color: #faf3ff;
+}
